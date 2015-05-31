@@ -69,6 +69,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Bleb n%27 Babas Tactical\main.cpp" />
+    <ClCompile Include="..\Bleb n%27 Babas Tactical\MapTile.cpp" />
+    <ClCompile Include="..\Bleb n%27 Babas Tactical\Textures.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Constantes.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\MainHeader.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Textures.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
