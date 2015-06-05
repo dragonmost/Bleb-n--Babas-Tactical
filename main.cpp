@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include "MainHeader.h"
 #include "TextureManager.h"
+#include "SoundManager.h"
 
 using namespace sf;
 using namespace std;
@@ -17,19 +18,39 @@ int main()
 	 * They would badly mix and make things worse.*/
 	window.setFramerateLimit(120);
 
+	
+	/*
+	music.openFromFile(".\\Textures\\Windows - Title Theme - The Legend of Zelda_ A Link to the Past.wav");
+
+	SoundBuffer buffer;
+	buffer.loadFromFile(".\\Textures\\fighter_sound.ogg");
+	attack.setBuffer(buffer);*/
+
 	TextureManager txtMgr;
+	SoundManager soundMgr;
+
+	Music music;
+	Sound attack;
+
+	attack.setBuffer(soundMgr.getSoundBuffer("test"));
+
+	SoundBuffer bb;
+	//bb.loadFromFile(".\\Textures\\test.ogg");
+	//attack.setBuffer(bb);
+	attack.play();
 
 	Sprite sprite;
-	sprite.setTexture(txtMgr.getTexture("Player0"));
-	sprite.setTextureRect(IntRect(16, 48, 16, 16));
-	sprite.setScale(Vector2f(ScaleX, ScaleY));
+	sprite.setTexture(txtMgr.getTexture("Hero"));
+	sprite.setTextureRect(IntRect(64 + 16, 0, 16, 16));
+	sprite.setScale(ScaleX, ScaleY);
+	
 
-	Sprite Floor[16][16];
-	for (int i = 0; i < 16; i++)
+
+	Sprite Floor[NbTileX][NbTileY];
+	for (int i = 0; i < NbTileX; i++)
 	{
-		for (int j = 0; j < 16; j++)
+		for (int j = 0; j < NbTileY; j++)
 		{
-			//Floor[i][j].setTexture(Textures::getTextureDungeon_Floor());
 			Floor[i][j].setTexture(txtMgr.getTexture("Tile"));
 			Floor[i][j].setTextureRect(IntRect(0,0, 16, 16));
 			Floor[i][j].setScale(Vector2f(ScaleX, ScaleY));
@@ -51,6 +72,8 @@ int main()
 				break;
 
 			case Event::KeyPressed:
+				attack.play();
+				//music.play();
 				break;
 
 			case Event::JoystickButtonPressed:
@@ -64,9 +87,9 @@ int main()
 
 			window.clear(Color::Black);
 			
-			for (int i = 0; i < 16; i++)
+			for (int i = 0; i < NbTileX; i++)
 			{
-				for (int j = 0; j < 16; j++)
+				for (int j = 0; j < NbTileY; j++)
 				{
 					window.draw(Floor[i][j]);
 				}

@@ -73,7 +73,11 @@
     <ClCompile Include="..\Bleb n%27 Babas Tactical\Textures.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Character.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Constantes.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Races.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\SoundManager.h" />
+    <ClInclude Include="Classes.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\MainHeader.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\TextureManager.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Textures.h" />

@@ -1,4 +1,4 @@
-//#include "Textures.cpp"
+#include "TextureManager.h"
 #include "Constantes.h"
 
 //using namespace sf;

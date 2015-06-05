@@ -38,5 +38,17 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\TextureManager.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Character.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Races.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\SoundManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

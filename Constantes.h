@@ -1,4 +1,6 @@
 #define SizeX 800
 #define SizeY 600
-#define ScaleX SizeX / 16 / 16
-#define ScaleY SizeY / 12 / 16
+#define NbTileX 16
+#define NbTileY 12
+#define ScaleX SizeX / NbTileX / 16
+#define ScaleY SizeY / NbTileY / 16
