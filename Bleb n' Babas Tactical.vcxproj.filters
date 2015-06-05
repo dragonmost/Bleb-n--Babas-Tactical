@@ -35,5 +35,8 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Textures.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\TextureManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

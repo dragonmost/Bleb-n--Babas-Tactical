@@ -1,4 +1,4 @@
-#include "Textures.h"
+/*#include "Textures.h"
 
 using namespace sf;
 using namespace std;
@@ -23,3 +23,6 @@ Texture Textures::getTextureDungeon_Floor()
 {
 	return Dungeon_Floor;
 }
+*/
+
+#include "Textures.h"

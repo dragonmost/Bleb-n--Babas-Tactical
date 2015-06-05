@@ -1,6 +1,6 @@
 #include <Windows.h>
 #include "MainHeader.h"
-#include "Textures.h"
+#include "TextureManager.h"
 
 using namespace sf;
 using namespace std;
@@ -17,19 +17,20 @@ int main()
 	 * They would badly mix and make things worse.*/
 	window.setFramerateLimit(120);
 
-	Sprite sprite;
-	sprite.setTexture(Textures::getTextureHero());
-	sprite.setTextureRect(IntRect(64, 32, 16, 16));
-	sprite.setScale(Vector2f(ScaleX, ScaleY));
+	TextureManager txtMgr;
 
-	Textures::Load();
+	Sprite sprite;
+	sprite.setTexture(txtMgr.getTexture("Player0"));
+	sprite.setTextureRect(IntRect(16, 48, 16, 16));
+	sprite.setScale(Vector2f(ScaleX, ScaleY));
 
 	Sprite Floor[16][16];
 	for (int i = 0; i < 16; i++)
 	{
 		for (int j = 0; j < 16; j++)
 		{
-			Floor[i][j].setTexture(Textures::getTextureHero());
+			//Floor[i][j].setTexture(Textures::getTextureDungeon_Floor());
+			Floor[i][j].setTexture(txtMgr.getTexture("Tile"));
 			Floor[i][j].setTextureRect(IntRect(0,0, 16, 16));
 			Floor[i][j].setScale(Vector2f(ScaleX, ScaleY));
 
@@ -62,7 +63,7 @@ int main()
 			}
 
 			window.clear(Color::Black);
-			window.draw(sprite);
+			
 			for (int i = 0; i < 16; i++)
 			{
 				for (int j = 0; j < 16; j++)
@@ -70,15 +71,13 @@ int main()
 					window.draw(Floor[i][j]);
 				}
 			}
-
+			window.draw(sprite);
 			window.display();
 		}
 	}
 
 	return 0;
 }
-
-
 
 
 void Game()
