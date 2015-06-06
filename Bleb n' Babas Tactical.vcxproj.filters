@@ -41,13 +41,19 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Character.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Classes.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Bleb n%27 Babas Tactical\Races.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\SoundManager.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Race.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Job.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\CelluleListe.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\ListDCwCur.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

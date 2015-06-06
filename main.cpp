@@ -18,33 +18,17 @@ int main()
 	 * They would badly mix and make things worse.*/
 	window.setFramerateLimit(120);
 
-	
-	/*
-	music.openFromFile(".\\Textures\\Windows - Title Theme - The Legend of Zelda_ A Link to the Past.wav");
-
-	SoundBuffer buffer;
-	buffer.loadFromFile(".\\Textures\\fighter_sound.ogg");
-	attack.setBuffer(buffer);*/
-
 	TextureManager txtMgr;
 	SoundManager soundMgr;
 
 	Music music;
 	Sound attack;
 
-	attack.setBuffer(soundMgr.getSoundBuffer("test"));
-
-	SoundBuffer bb;
-	//bb.loadFromFile(".\\Textures\\test.ogg");
-	//attack.setBuffer(bb);
-	attack.play();
-
 	Sprite sprite;
 	sprite.setTexture(txtMgr.getTexture("Hero"));
 	sprite.setTextureRect(IntRect(64 + 16, 0, 16, 16));
 	sprite.setScale(ScaleX, ScaleY);
 	
-
 
 	Sprite Floor[NbTileX][NbTileY];
 	for (int i = 0; i < NbTileX; i++)
@@ -72,8 +56,6 @@ int main()
 				break;
 
 			case Event::KeyPressed:
-				attack.play();
-				//music.play();
 				break;
 
 			case Event::JoystickButtonPressed:
