@@ -56,5 +56,11 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\ListDCwCur.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Team.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Cursor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

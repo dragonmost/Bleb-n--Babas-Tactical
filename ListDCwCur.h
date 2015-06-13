@@ -75,7 +75,7 @@ public:
 		if (_Pos <= (m_uiCompte / 2))
 		{
 			m_pCurseur = m_pPremier;
-			for (int ii = 1; ii < _Pos - 1; i++)
+			for (int ii = 1; ii < _Pos - 1; ii++)
 				m_pCurseur = m_pCurseur->ObtenirSuivant();
 
 			return true;
@@ -83,7 +83,7 @@ public:
 		if (_Pos >(m_uiCompte / 2))
 		{
 			m_pCurseur = m_pDernier;
-			for (int ii = m_uiCompte; ii > _Position; i--)
+			for (int ii = m_uiCompte; ii > _Pos; ii--)
 				m_pCurseur = m_pCurseur->ObtenirPrecedent();
 
 			return true;
@@ -92,7 +92,7 @@ public:
 			return false;
 	}
 
-	/*Ajouter une valeur dans la liste 
+	/*Ajouter une valeur dans la liste
 	_Element: la valeur a ajouter dans la liste*/
 	void Ajouter(Type _Element)
 	{
@@ -150,6 +150,7 @@ public:
 	{
 		if (m_pCurseur != nullptr)
 		{
+			m_uiCompte--;
 			if (m_pCurseur == m_pDernier)
 			{
 				CCelluleListe<Type>* pTemp = m_pCurseur;
@@ -163,23 +164,23 @@ public:
 			}
 			/*else
 			{
-				CCelluleListe<Type>* pTemp = m_pCurseur;
-				m_pCurseur = m_pCurseur->ObtenirSuivant();
-				if (pTemp == m_pPremier)
-				{
-					m_pCurseur->DefinirPrecedent(nullptr);
-					m_pPremier = m_pCurseur;
-					delete pTemp;
-					return true;
-				}
-				else
-				{
-					CCelluleListe<Type>* pTempQ = pTemp->ObtenirPrecedent();
-					pTempQ->DefinirSuivant(m_pCurseur);
-					m_pCurseur->DefinirPrecedent(pTempQ);
-					delete pTemp;
-					return true;
-				}
+			CCelluleListe<Type>* pTemp = m_pCurseur;
+			m_pCurseur = m_pCurseur->ObtenirSuivant();
+			if (pTemp == m_pPremier)
+			{
+			m_pCurseur->DefinirPrecedent(nullptr);
+			m_pPremier = m_pCurseur;
+			delete pTemp;
+			return true;
+			}
+			else
+			{
+			CCelluleListe<Type>* pTempQ = pTemp->ObtenirPrecedent();
+			pTempQ->DefinirSuivant(m_pCurseur);
+			m_pCurseur->DefinirPrecedent(pTempQ);
+			delete pTemp;
+			return true;
+			}
 			}*/
 			else if (m_pCurseur == m_pPremier)
 			{
@@ -201,7 +202,7 @@ public:
 				delete pTemp;
 				return true;
 			}
-			m_uiCompte--;
+
 		}
 		else
 			return false;
@@ -224,8 +225,8 @@ public:
 
 	~CListDCwCur()
 	{
-
+		for (int ii = 0; ii < m_uiCompte; ii++)
+			delete retirer(ii);
 	}
 
 };
-

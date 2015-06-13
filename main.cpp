@@ -2,6 +2,7 @@
 #include "MainHeader.h"
 #include "TextureManager.h"
 #include "SoundManager.h"
+#include "Cursor.h"
 
 using namespace sf;
 using namespace std;
@@ -38,10 +39,19 @@ int main()
 			Floor[i][j].setTexture(txtMgr.getTexture("Tile"));
 			Floor[i][j].setTextureRect(IntRect(0,0, 16, 16));
 			Floor[i][j].setScale(Vector2f(ScaleX, ScaleY));
-
+			
 			Floor[i][j].setPosition(Vector2f(i * 16 * ScaleX, j * 16 * ScaleY));
 		}
 	}
+	
+	Cursor cursor = Cursor(7, 5, NbTileX, NbTileY);
+	Sprite sprCursor;
+	sprCursor.setTexture(txtMgr.getTexture("Tile"));
+	sprCursor.setTextureRect(IntRect(0, 0, 16, 16));
+	sprCursor.setScale(Vector2f(ScaleX, ScaleY));
+	sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
+	sprCursor.setColor(Color::Cyan);
+	
 	
 
 	while (window.isOpen())
@@ -59,6 +69,22 @@ int main()
 				break;
 
 			case Event::JoystickButtonPressed:
+				switch (event.joystickButton.button)
+				{
+				case 12:	//UP
+					cursor.MoveUp();
+					break;
+				case 13:	//RIGHT
+					cursor.MoveRight();
+					break;
+				case 14:	//Down
+					cursor.MoveDown();
+					break;
+				case 15:	//LEFT
+					cursor.MoveLeft();
+					break;
+				}
+				sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
 				break;
 			case Event::JoystickMoved:
 				break;
@@ -77,6 +103,7 @@ int main()
 				}
 			}
 			window.draw(sprite);
+			window.draw(sprCursor);
 			window.display();
 		}
 	}
