@@ -3,6 +3,7 @@
 #include "Race.h"
 #include "CelluleListe.h"
 #include "ListDCwCur.h"
+#include "CharStat.h"
 
 using namespace std;
 using namespace sf;
@@ -14,14 +15,7 @@ private:
 	int Level;
 	Job classname;
 	Race RaceName;
-	int baseHP;
-	int baseMana;
-	int baseSpeed;
-	int baseStrenght;
-	int baseDefence;
-	int baseMind;
-	int Bravery;
-	int Faith;
+	CharStat baseStat;
 	//CListDCwCur<Stat>* lstStat = new CListDCwCur<Stat>();		//list of base stat instead
 	//CListDCwCur<Stat>* lstBuff = new CListDCwCur<Stat>();		//list of buff stat
 	//CListDCwCur<Equipe>* lstBuff = new CListDCwCur<Equipe>();	//list of item equiped
@@ -31,18 +25,11 @@ private:
 	int PosY;
 	
 public:
-	Character(string _Name, int _Level, int _HP, int _Mana, int _Speed, int _Strenght, int _Defence, int _Mind, int _Bravery, int _Faith, string _txtname)
+	Character(string _Name, int _Level, CharStat _baseStat, string _txtname)
 	{
 		Name = _Name;
 		Level = _Level;
-		baseHP = _HP;
-		baseMana = _Mana;
-		baseSpeed = _Speed;
-		baseStrenght = _Strenght;
-		baseDefence = _Defence;
-		baseMind = _Mind;
-		Bravery = _Bravery;
-		Faith = _Faith;
+		baseStat = _baseStat;
 		TextureName = _txtname;
 	}
 
@@ -51,49 +38,49 @@ public:
 		return Name;
 	}
 
-	int getHP()
-	{
-		return baseHP;
-	}
-
-	int getMane()
-	{
-		return baseMana;
-	}
-
 	int getLevel()
 	{
 		return Level;
 	}
 
+	int getHP()
+	{
+		return baseStat.getHP();
+	}
+
+	int getMane()
+	{
+		return baseStat.getMana();
+	}
+
 	int getSpeed()
 	{
-		return baseSpeed;
+		return baseStat.getSpeed();
 	}
 
 	int getStrenght()
 	{
-		return baseStrenght;
+		return baseStat.getStrenght();
 	}
 
 	int getDefence()
 	{
-		return baseDefence;
+		return baseStat.getDefence();
 	}
 
 	int getMind()
 	{
-		return baseMind;
-	}
-
-	int getFaith()
-	{
-		return Faith;
+		return baseStat.getMind();
 	}
 
 	int getBravery()
 	{
-		return Bravery;
+		return baseStat.getBravery();
+	}
+
+	int getFaith()
+	{
+		return baseStat.getFaith();
 	}
 
 	string getTexureName()

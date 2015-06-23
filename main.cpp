@@ -46,7 +46,7 @@ int main()
 	
 	Cursor cursor = Cursor(7, 5, NbTileX, NbTileY);
 	Sprite sprCursor;
-	sprCursor.setTexture(txtMgr.getTexture("Tile"));
+	sprCursor.setTexture(txtMgr.getTexture("UI"));
 	sprCursor.setTextureRect(IntRect(0, 0, 16, 16));
 	sprCursor.setScale(Vector2f(ScaleX, ScaleY));
 	sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
@@ -66,6 +66,22 @@ int main()
 				break;
 
 			case Event::KeyPressed:
+				switch (event.key.code)
+				{
+				case Keyboard::W:
+					cursor.MoveUp();
+					break;
+				case Keyboard::A:
+					cursor.MoveLeft();
+					break;
+				case Keyboard::S:
+					cursor.MoveDown();
+					break;
+				case Keyboard::D:
+					cursor.MoveRight();
+					break;
+				}
+				sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
 				break;
 
 			case Event::JoystickButtonPressed:

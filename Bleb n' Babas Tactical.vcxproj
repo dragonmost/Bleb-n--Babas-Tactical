@@ -75,6 +75,7 @@
   <ItemGroup>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\CelluleListe.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Character.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\CharStat.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Constantes.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Cursor.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\ListDCwCur.h" />
