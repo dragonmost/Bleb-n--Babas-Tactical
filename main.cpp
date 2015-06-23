@@ -52,7 +52,18 @@ int main()
 	sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
 	sprCursor.setColor(Color::Cyan);
 	
-	
+	RectangleShape Menu(Vector2f(256, 512));
+	Menu.setTexture(&txtMgr.getTexture("UI"));
+	Menu.setTextureRect(IntRect(16, 0, 16, 16));
+	//Menu.setScale(Vector2f(ScaleX, ScaleY));
+
+	Text MenuText;
+	Font font;
+	font.loadFromFile("MorrisRomanBlack.ttf");
+	MenuText.setString("Menu");
+	MenuText.setFont(font);
+	MenuText.setColor(Color::Red);
+	MenuText.setPosition(120, 50);
 
 	while (window.isOpen())
 	{
@@ -120,6 +131,10 @@ int main()
 			}
 			window.draw(sprite);
 			window.draw(sprCursor);
+
+			window.draw(Menu);
+			window.draw(MenuText);
+			
 			window.display();
 		}
 	}
@@ -133,3 +148,4 @@ void Game()
 	
 
 }
+
