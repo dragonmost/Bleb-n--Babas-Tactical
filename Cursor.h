@@ -3,6 +3,7 @@ class Cursor
 private:
 	int X, Y;
 	int MaxX, MaxY;
+	bool boSelect;
 
 public:
 	Cursor(int _X, int _Y, int _MaxX, int _MaxY)
@@ -11,6 +12,7 @@ public:
 		Y = _Y;
 		MaxX = _MaxX;
 		MaxY = _MaxY;
+		boSelect = false;
 	}
 
 	Cursor(int _X, int _MaxX)
@@ -27,7 +29,7 @@ public:
 		if (Y == -1)
 		{
 			if (X == 0)
-				X = 0;
+				X = MaxX -1;
 			else
 				X--;
 		}
@@ -75,7 +77,7 @@ public:
 		if (Y == -1)
 		{
 			if (X == 0)
-				X = MaxX;
+				X = MaxX -1;
 			else
 				X--;
 		}
@@ -86,6 +88,15 @@ public:
 		}
 	}
 
+	void Select()
+	{
+		boSelect = !boSelect;
+	}
+
+	bool getSelectState()
+	{
+		return boSelect;
+	}
 
 	int getX()
 	{

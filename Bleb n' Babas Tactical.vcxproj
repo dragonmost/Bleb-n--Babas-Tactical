@@ -79,6 +79,7 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Constantes.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Cursor.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\ListDCwCur.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Render.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Team.h" />
     <ClInclude Include="Race.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\SoundManager.h" />

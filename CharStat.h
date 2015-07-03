@@ -10,6 +10,8 @@ class CharStat
 private:
 	int HP;
 	int Mana;
+	int TP;	//your turn when it reaches 100
+	int Move;	//number of tiles you can move per turn
 	int Speed;
 	int Strenght;
 	int Defence;
@@ -22,6 +24,8 @@ public:
 	{
 		HP = 100;
 		Mana = 100;
+		TP = 0;
+		Move = 4;
 		Speed = 1;
 		Strenght = 1;
 		Defence = 1;
@@ -30,10 +34,12 @@ public:
 		Faith = 50;
 	}
 
-	CharStat(int _HP, int _Mana, int _Speed, int _Strenght, int _Defence, int _Mind, int _Bravery, int _Faith)
+	CharStat(int _HP, int _Mana, int _TP, int _Move, int _Speed, int _Strenght, int _Defence, int _Mind, int _Bravery, int _Faith)
 	{
 		HP = _HP;
 		Mana = _Mana;
+		TP = _TP;
+		Move = _Move;
 		Speed = _Speed;
 		Strenght = _Strenght;
 		Defence = _Defence;

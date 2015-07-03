@@ -3,70 +3,28 @@
 #include "TextureManager.h"
 #include "SoundManager.h"
 #include "Cursor.h"
+#include "Render.h"
 
 using namespace sf;
 using namespace std;
+
+void Game(RenderWindow& window);
 
 int main()
 {
 	//HWND hWnd = GetConsoleWindow();
 	//ShowWindow(hWnd, SW_HIDE);
+	RenderWindow window;
+	window.create(VideoMode(SizeX, SizeY), "Bleb n' Babas Tactical", Style::Close);
+	window.setVerticalSyncEnabled(true);
 
-
-	sf::RenderWindow window(sf::VideoMode(SizeX, SizeY), "Bleb n' Babas Tactical", sf::Style::Close);
-	//window.setVerticalSyncEnabled(true);
-	/* Never use both setVerticalSyncEnabled and setFramerateLimit at the same time! 
-	 * They would badly mix and make things worse.*/
-	window.setFramerateLimit(120);
-
-	TextureManager txtMgr;
-	SoundManager soundMgr;
-
-	Music music;
-	Sound attack;
-
-	Sprite sprite;
-	sprite.setTexture(txtMgr.getTexture("Hero"));
-	sprite.setTextureRect(IntRect(64 + 16, 0, 16, 16));
-	sprite.setScale(ScaleX, ScaleY);
-	
-
-	Sprite Floor[NbTileX][NbTileY];
-	for (int i = 0; i < NbTileX; i++)
-	{
-		for (int j = 0; j < NbTileY; j++)
-		{
-			Floor[i][j].setTexture(txtMgr.getTexture("Tile"));
-			Floor[i][j].setTextureRect(IntRect(0,0, 16, 16));
-			Floor[i][j].setScale(Vector2f(ScaleX, ScaleY));
-			
-			Floor[i][j].setPosition(Vector2f(i * 16 * ScaleX, j * 16 * ScaleY));
-		}
-	}
-	
-	Cursor cursor = Cursor(7, 5, NbTileX, NbTileY);
-	Sprite sprCursor;
-	sprCursor.setTexture(txtMgr.getTexture("UI"));
-	sprCursor.setTextureRect(IntRect(0, 0, 16, 16));
-	sprCursor.setScale(Vector2f(ScaleX, ScaleY));
-	sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
-	sprCursor.setColor(Color::Cyan);
-	
-	RectangleShape Menu(Vector2f(256, 512));
-	Menu.setTexture(&txtMgr.getTexture("UI"));
-	Menu.setTextureRect(IntRect(16, 0, 16, 16));
-	//Menu.setScale(Vector2f(ScaleX, ScaleY));
-
-	Text MenuText;
-	Font font;
-	font.loadFromFile("MorrisRomanBlack.ttf");
-	MenuText.setString("Menu");
-	MenuText.setFont(font);
-	MenuText.setColor(Color::Red);
-	MenuText.setPosition(120, 50);
+	Render render;
+	Cursor MenuCursor(0, 4);
 
 	while (window.isOpen())
 	{
+		render.Menu(window, MenuCursor.getX(), 0);
+
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
@@ -80,62 +38,36 @@ int main()
 				switch (event.key.code)
 				{
 				case Keyboard::W:
-					cursor.MoveUp();
+					MenuCursor.MoveUp();
 					break;
 				case Keyboard::A:
-					cursor.MoveLeft();
+					MenuCursor.MoveLeft();
 					break;
 				case Keyboard::S:
-					cursor.MoveDown();
+					MenuCursor.MoveDown();
 					break;
 				case Keyboard::D:
-					cursor.MoveRight();
+					MenuCursor.MoveRight();
+					break;
+				case Keyboard::Space:
+					for (int i = 0; i < SizeX; i += (SizeX / 20))
+						render.Menu(window, MenuCursor.getX(), i);
+					switch (MenuCursor.getX())
+					{
+					case 0:	//Continue
+						break;
+					case 1:	//Load Game
+						break;
+					case 2:	//New Game
+						break;
+					case 3:	//Option
+						break;
+					}
 					break;
 				}
-				sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
-				break;
-
-			case Event::JoystickButtonPressed:
-				switch (event.joystickButton.button)
-				{
-				case 12:	//UP
-					cursor.MoveUp();
-					break;
-				case 13:	//RIGHT
-					cursor.MoveRight();
-					break;
-				case 14:	//Down
-					cursor.MoveDown();
-					break;
-				case 15:	//LEFT
-					cursor.MoveLeft();
-					break;
-				}
-				sprCursor.setPosition(Vector2f(cursor.getX() * 16 * ScaleX, cursor.getY() * 16 * ScaleY));
-				break;
-			case Event::JoystickMoved:
-				break;
-
 			default:
 				break;
 			}
-
-			window.clear(Color::Black);
-			
-			for (int i = 0; i < NbTileX; i++)
-			{
-				for (int j = 0; j < NbTileY; j++)
-				{
-					window.draw(Floor[i][j]);
-				}
-			}
-			window.draw(sprite);
-			window.draw(sprCursor);
-
-			window.draw(Menu);
-			window.draw(MenuText);
-			
-			window.display();
 		}
 	}
 
@@ -143,9 +75,11 @@ int main()
 }
 
 
-void Game()
+void Game(RenderWindow& window)
 {
+	Render render;
 	
+
 
 }
 

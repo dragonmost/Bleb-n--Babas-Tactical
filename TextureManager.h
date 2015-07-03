@@ -28,7 +28,7 @@ public:
 		}
 
 		Texture texture;
-		if (texture.loadFromFile(".\\Textures\\" + _filename + ".png"))
+		if (texture.loadFromFile(".\\Textures\\My Work\\" + _filename + ".png"))
 		{
 			textures[_filename] = texture;
 			return textures[_filename];
