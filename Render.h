@@ -103,11 +103,12 @@ bool render()
 
 	Text MenuText;
 	Font font;
-	font.loadFromFile("MorrisRomanBlack.ttf");
+	font.loadFromFile("BakerFont.fon");
 	MenuText.setString("Menu");
 	MenuText.setFont(font);
-	MenuText.setColor(Color::Red);
-	MenuText.setPosition(120, 50);
+	MenuText.setColor(Color::Black);
+	MenuText.setPosition(10,10);
+	MenuText.setCharacterSize(24);
 
 	//worst animation ever
 	Sprite Crystal1;
@@ -207,11 +208,11 @@ bool render()
 			}
 			
 
-			window.draw(sprite);
+			//window.draw(sprite);
 			window.draw(sprCursor);
 
 			//window.draw(Menu);
-			//window.draw(MenuText);
+			window.draw(MenuText);
 			if (anim < 10)
 				window.draw(Crystal1);
 			else if (anim < 20 && anim >= 10)
@@ -232,3 +233,66 @@ bool render()
 }
 
 };
+
+
+/*
+RenderWindow window;
+window.create(VideoMode(SizeX, SizeY), "Bleb n' Babas Tactical", Style::Close);
+window.setVerticalSyncEnabled(true);
+
+Render render;
+Cursor MenuCursor(0, 4);
+
+while (window.isOpen())
+{
+render.Menu(window, MenuCursor.getX(), 0);
+
+sf::Event event;
+while (window.pollEvent(event))
+{
+switch (event.type)
+{
+case Event::Closed:
+window.close();
+break;
+
+case Event::KeyPressed:
+switch (event.key.code)
+{
+case Keyboard::W:
+MenuCursor.MoveUp();
+break;
+case Keyboard::A:
+MenuCursor.MoveLeft();
+break;
+case Keyboard::S:
+MenuCursor.MoveDown();
+break;
+case Keyboard::D:
+MenuCursor.MoveRight();
+break;
+case Keyboard::Space:
+for (int i = 0; i < SizeX; i += (SizeX / 20))
+render.Menu(window, MenuCursor.getX(), i);
+switch (MenuCursor.getX())
+{
+case 0:	//Continue
+break;
+case 1:	//Load Game
+break;
+case 2:	//New Game
+break;
+case 3:	//Option
+break;
+}
+break;
+}
+default:
+break;
+}
+}
+}
+
+return 0;
+
+*/

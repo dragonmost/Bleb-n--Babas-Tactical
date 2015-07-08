@@ -21,18 +21,12 @@
     <ClCompile Include="..\Bleb n%27 Babas Tactical\MapTile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Bleb n%27 Babas Tactical\Textures.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\MainHeader.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Constantes.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Bleb n%27 Babas Tactical\Textures.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\TextureManager.h">
@@ -66,6 +60,21 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Render.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Screen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScreen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\MenuScreen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\cScreen.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\NewGameScreen.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -70,23 +70,26 @@
   <ItemGroup>
     <ClCompile Include="..\Bleb n%27 Babas Tactical\main.cpp" />
     <ClCompile Include="..\Bleb n%27 Babas Tactical\MapTile.cpp" />
-    <ClCompile Include="..\Bleb n%27 Babas Tactical\Textures.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\CelluleListe.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Character.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\CharStat.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Constantes.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\cScreen.hpp" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Cursor.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\MenuScreen.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\NewGameScreen.h" />
+    <ClInclude Include="GameScreen.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\ListDCwCur.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Render.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Screen.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Team.h" />
     <ClInclude Include="Race.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\SoundManager.h" />
     <ClInclude Include="Job.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\MainHeader.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\TextureManager.h" />
-    <ClInclude Include="..\Bleb n%27 Babas Tactical\Textures.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

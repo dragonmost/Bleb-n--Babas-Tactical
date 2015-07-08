@@ -57,6 +57,11 @@ public:
 			textures.erase(i);
 	}
 
+	void deleteAllTextures()
+	{
+		textures.clear();
+	}
+
 	~TextureManager()
 	{
 
