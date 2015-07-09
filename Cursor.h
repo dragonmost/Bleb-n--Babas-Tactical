@@ -89,23 +89,31 @@ public:
 	}
 
 	void Select()
-	{
-		boSelect = !boSelect;
-	}
+	{ boSelect = !boSelect; }
 
 	bool getSelectState()
-	{
-		return boSelect;
-	}
+	{ return boSelect; }
 
 	int getX()
-	{
-		return X;
-	}
+	{ return X; }
 
 	int getY()
-	{
-		return Y;
+	{ return Y; }
+
+	void setX(int _X)
+	{ 
+		if (_X < MaxX)
+			X = _X;
+		else
+			X = MaxX -1;
+	}
+
+	void setY(int _Y)
+	{ 
+		if (_Y < MaxY)
+			Y = _Y;
+		else
+			Y = MaxY -1;
 	}
 
 };

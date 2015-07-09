@@ -78,6 +78,7 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Constantes.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\cScreen.hpp" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Cursor.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\MapScreen.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\MenuScreen.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\NewGameScreen.h" />
     <ClInclude Include="GameScreen.h" />

@@ -18,7 +18,11 @@ public:
 		Cursor MenuCursor(0, 4);
 		Sprite Menu;	//Menu background image
 		Sprite cursor;
-		int menu = 0;		
+		int menu = 0;
+		bool Enter = false;
+		int AnimFrame = 0;
+		RectangleShape EnterAnimation(Vector2f(AnimFrame, 32));
+		Color rectColor(255, 255, 255, 100);
 
 		Menu.setTexture(txtMgr.getTexture("Main Menu"));
 		Menu.setScale(0.5, 0.5);
@@ -39,7 +43,7 @@ public:
 					return (-1);
 				}
 				//Key pressed
-				if (Event.type == Event::KeyPressed)
+				if (Event.type == Event::KeyPressed && !Enter)
 				{
 					switch (Event.key.code)
 					{
@@ -57,8 +61,7 @@ public:
 						break;
 					case Keyboard::Space:
 					case Keyboard::Return:
-						txtMgr.deleteAllTextures();
-						return(menu + 1);
+						Enter = true;
 						break;
 					case Keyboard::Escape:
 						return -1;
@@ -68,14 +71,27 @@ public:
 					}
 				}
 			}
-
 			
 			cursor.setPosition(220, (menu * 50) + 275);
+
+			if (Enter)
+			{
+				EnterAnimation.setFillColor(rectColor);
+				EnterAnimation.setSize(Vector2f(AnimFrame, 32));
+				EnterAnimation.setPosition((SizeX / 2) - (AnimFrame / 2), (MenuCursor.getX() * 50) + 288);
+				if (AnimFrame > SizeX)
+				{
+					txtMgr.deleteAllTextures();
+					return(menu + 1);
+				}
+				AnimFrame += (SizeX / 20);
+			}
 	
 			//Clearing screen
 			App.clear();
 			//Drawing
 			App.draw(Menu);
+			App.draw(EnterAnimation);
 			App.draw(cursor);
 			
 			App.display();

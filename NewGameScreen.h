@@ -17,7 +17,7 @@ public:
 		Sprite BG;
 		Cursor SelectCursor(0, 0, 13, 5);
 		Sprite cursor;
-		string name;
+		string name = "Bleb";
 		Text Name;
 		Text NameN;
 		Text NameS;
@@ -34,7 +34,7 @@ public:
 		cursor.setPosition(80, 210);
 		cursor.scale(2.3, 2.3);
 
-		font.loadFromFile("MorrisRomanBlack.ttf");
+		font.loadFromFile("courbd.ttf");
 		Name.setFont(font);
 		Name.setColor(Color::Black);
 		Name.setPosition(Vector2f(10, 10));
@@ -53,6 +53,7 @@ public:
 		NameW.setColor(Color::White);
 		NameW.setPosition(Vector2f(10 + 2, 10));
 		
+		enum ScreenName{Menu, autre};
 
 		while (Running)
 		{
@@ -99,6 +100,18 @@ public:
 						}
 						else if (name.size() < 10)
 							name += letter;
+						break;
+					case Keyboard::Return:
+						if (SelectCursor.getX() == 11 && SelectCursor.getY() == 4)
+						{
+							txtMgr.deleteAllTextures();
+							return (MAPSCREEN);
+						}
+						else
+						{
+							SelectCursor.setX(11);
+							SelectCursor.setY(4);
+						}
 						break;
 					case Keyboard::BackSpace:
 						if (name.size() > 0)

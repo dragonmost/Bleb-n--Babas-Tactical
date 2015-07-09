@@ -23,21 +23,22 @@ int main(int argc, char** argv)
 	window.setVerticalSyncEnabled(true);
 
 	
-
 	//Mouse cursor no more visible
 	window.setMouseCursorVisible(false);
 
 	//Screens preparations
 	MenuScreen menuScreen;
 	Screens.push_back(&menuScreen);
-	GameScreen gameScreen;
-	Screens.push_back(&gameScreen);
+	MapScreen mapScreen;
+	Screens.push_back(&mapScreen);
 	/*LoadScreen*/GameScreen loadScreen;
 	Screens.push_back(&loadScreen);
 	NewGameScreen newGameScreen;
 	Screens.push_back(&newGameScreen);
 	/*OptionScreen*/GameScreen optionScreen;
 	Screens.push_back(&optionScreen);
+	GameScreen gameScreen;
+	Screens.push_back(&gameScreen);
 	
 
 	//Main loop

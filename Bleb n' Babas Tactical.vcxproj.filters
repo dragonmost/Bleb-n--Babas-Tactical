@@ -77,5 +77,8 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\NewGameScreen.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\MapScreen.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

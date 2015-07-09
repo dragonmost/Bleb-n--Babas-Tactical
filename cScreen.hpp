@@ -11,5 +11,6 @@
 #include "MenuScreen.h"
 #include "GameScreen.h"
 #include "NewGameScreen.h"
+#include "MapScreen.h"
 
 #endif // SCREENS_HPP_INCLUDED
