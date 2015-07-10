@@ -53,7 +53,6 @@ public:
 		NameW.setColor(Color::White);
 		NameW.setPosition(Vector2f(10 + 2, 10));
 		
-		enum ScreenName{Menu, autre};
 
 		while (Running)
 		{
