@@ -3,6 +3,7 @@
 #include "TextureManager.h"
 #include "SoundManager.h"
 #include "cScreen.hpp"
+#include "Animations.h"
 
 
 
