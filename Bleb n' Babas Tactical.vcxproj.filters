@@ -21,6 +21,12 @@
     <ClCompile Include="..\Bleb n%27 Babas Tactical\MapTile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Bleb n%27 Babas Tactical\AnimatedSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Bleb n%27 Babas Tactical\Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Bleb n%27 Babas Tactical\MainHeader.h">
@@ -86,7 +92,10 @@
     <ClInclude Include="..\Bleb n%27 Babas Tactical\CelluleFile.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Animations.h">
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\AnimatedSprite.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Animation.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

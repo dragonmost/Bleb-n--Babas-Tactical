@@ -3,7 +3,10 @@
 #include "TextureManager.h"
 #include "SoundManager.h"
 #include "cScreen.hpp"
-#include "Animations.h"
+#include "Animation.hpp"
+
+
+
 
 
 
@@ -21,7 +24,8 @@ int main(int argc, char** argv)
 
 	//Window creation
 	RenderWindow window(VideoMode(SizeX, SizeY), "Bleb n' Babas Tactical", Style::Close);
-	window.setVerticalSyncEnabled(true);
+	//window.setVerticalSyncEnabled(true);
+	window.setFramerateLimit(60);
 
 	
 	//Mouse cursor no more visible

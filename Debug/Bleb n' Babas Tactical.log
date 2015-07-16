@@ -1,5 +1,5 @@
-﻿Build started 2015-07-10 22:46:22.
-     1>Project "C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\Bleb n' Babas Tactical.vcxproj" on node 2 (Build target(s)).
+﻿Build started 2015-07-16 01:52:56.
+     1>Project "C:\Users\Baker\documents\visual studio 2013\Projects\Bleb n' Babas Tactical\Bleb n' Babas Tactical.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\SFML-2.3\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\Bleb n' Babas Tactical\main.cpp"
          main.cpp
@@ -9,18 +9,22 @@
      1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\menuscreen.h(81): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
      1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\newgamescreen.h(35): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\newgamescreen.h(133): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(44): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(116): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(117): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(119): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
-     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(120): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(126): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(45): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(59): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(140): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(141): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(150): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(155): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(201): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\bleb n' babas tactical\mapscreen.h(202): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\SFML-2.3\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.lib" /MACHINE:X86 Debug\main.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Baker\documents\visual studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\SFML-2.3\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Baker\documents\visual studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Baker\documents\visual studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.lib" /MACHINE:X86 Debug\AnimatedSprite.obj
+         Debug\Animation.obj
+         Debug\main.obj
          Debug\MapTile.obj
-         Bleb n' Babas Tactical.vcxproj -> C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.exe
-     1>Done Building Project "C:\Users\Baker\Documents\Visual Studio 2013\Projects\Bleb n' Babas Tactical\Bleb n' Babas Tactical.vcxproj" (Build target(s)).
+         Bleb n' Babas Tactical.vcxproj -> C:\Users\Baker\documents\visual studio 2013\Projects\Bleb n' Babas Tactical\Debug\Bleb n' Babas Tactical.exe
+     1>Done Building Project "C:\Users\Baker\documents\visual studio 2013\Projects\Bleb n' Babas Tactical\Bleb n' Babas Tactical.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.18
+Time Elapsed 00:00:01.71

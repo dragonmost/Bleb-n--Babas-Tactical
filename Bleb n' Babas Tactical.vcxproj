@@ -68,11 +68,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Bleb n%27 Babas Tactical\AnimatedSprite.cpp" />
+    <ClCompile Include="..\Bleb n%27 Babas Tactical\Animation.cpp" />
     <ClCompile Include="..\Bleb n%27 Babas Tactical\main.cpp" />
     <ClCompile Include="..\Bleb n%27 Babas Tactical\MapTile.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animations.h" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\AnimatedSprite.hpp" />
+    <ClInclude Include="..\Bleb n%27 Babas Tactical\Animation.hpp" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\Area.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\CelluleFile.h" />
     <ClInclude Include="..\Bleb n%27 Babas Tactical\CelluleListe.h" />
